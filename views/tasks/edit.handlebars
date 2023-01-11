@@ -1,0 +1,25 @@
+<div class="row justify-content-center my-5">
+    <div class="col-10 col-md-8 bg-dark bg-gradient shadow rounded">
+        <h1 class="text-center text-white py-2">Editando a tarefa: {{task.title}}</h1>
+    </div>
+</div>
+<div class="row justify-content-center align-items-center">
+    <div class="col-10 col-md-8 bg-light bg-gradient shadow rounded p-5">
+        <form action="/tasks/edit" method="POST">
+            <input type="hidden" name="id" value="{{task.id}}">
+            <div class="my-3">
+                <label for="title" class="form-label fw-bold">Título:</label>
+                <input type="text" class="form-control shadow" name="title" id="title" placeholder="O que você vai fazer?" value="{{task.title}}">
+            </div>
+            <div class="my-3">
+                <label for="description" class="form-label fw-bold">Descrição da tarefa:</label>
+                <textarea class="form-control shadow" name="description" id="description" rows="5" placeholder="Descreva a tarefa...">{{task.description}}</textarea>
+            </div>
+            <div class="row justify-content-center align-items-center my-5">
+                <div class="col-10 col-md-4">
+                    <input type="submit" class="form-control btn btn-outline-dark shadow w-100" value="Salvar">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
